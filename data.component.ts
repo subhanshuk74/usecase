@@ -28,14 +28,20 @@ import { Observable } from 'rxjs';
   styleUrl: './data.component.scss'
 })
 export class DataComponent implements OnInit{
-  users: any[] = jsonData.users;
   pageNumber: number = 1;
   totalPages: number = 1;
+  users;
   
+  @Input() parentData: any;
   constructor(public filterService: FilterService) {}
 
   ngOnInit() {
+    this.users = this.parentData;
     this.filterService.getBoxes(); // Assign the Observable returned by the service
+  }
+
+  ngOnChange(){
+    this.users = this.parentData;
   }
   
 

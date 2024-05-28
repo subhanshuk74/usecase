@@ -26,55 +26,49 @@
           </div>
     
     </div>
+    <form [formGroup]="filterForm">
+        
+        <div class="input-group">
+            <div class="custom-select1">
+            <label>Customer:</label>
+            <br>
+            <select formControlName="customer" ng-model="box.customer">
+                <option value="All">All</option>
+                <!-- Add more options if needed -->
+            </select>
+        </div>
+        </div>
+        <div class="input-group">
+            <div class="custom-select1">
+            <label>Status:</label>
+            <br>
+            <select formControlName="status" ng-model="box.status">
+                <option value="Unassigned">Unassigned</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+                <option value="All">All</option>
+            </select>
+        </div>
+        </div>
+        <div class="input-group">
+            <label>SKP Order Number:</label>
+            <br>
+            <input type="text" formControlName="SKPorder" ng-model="box.skpOrderNumber">
+        </div>
+        <div class="input-group">
+            <label>Box Number:</label>
+            <br>
+            <textarea rows="1" formControlName="boxno" ng-model="box.boxNumber"></textarea>
+        </div>
+    </form>
+    
     <div class="input-group">
-        <label>Site:</label>
-        <br>
-        <div class="custom-select">
-        <select ng-model="box.site">
-            <option value="AU Imaging - AU IMAGING">AU Imaging - AU IMAGING</option>
-            <!-- Add more options if needed -->
-        </select>
-    </div>
-    </div>
-    <div class="input-group">
-        <div class="custom-select1">
-        <label>Customer:</label>
-        <br>
-        <select ng-model="box.customer">
-            <option value="All">All</option>
-            <!-- Add more options if needed -->
-        </select>
-    </div>
-    </div>
-    <div class="input-group">
-        <div class="custom-select1">
-        <label>Status:</label>
-        <br>
-        <select ng-model="box.status">
-            <option value="Unassigned">Unassigned</option>
-            <option value="In Progress">In Progress</option>
-            <option value="Completed">Completed</option>
-            <option value="All">All</option>
-        </select>
-    </div>
-    </div>
-    <div class="input-group">
-        <label>SKP Order Number:</label>
-        <br>
-        <input type="text" ng-model="box.skpOrderNumber">
-    </div>
-    <div class="input-group">
-        <label>Box Number:</label>
-        <br>
-        <textarea rows="1" ng-model="box.boxNumber"></textarea>
-    </div>
-    <div class="input-group">
-      <button mat-button class="toggle-btn"><b> Filter </b> </button>
+      <button mat-button class="toggle-btn" (click)="filterTable()"><b> Filter </b> </button>
      </div>
    </div>
    <div class="box">
     <label class= "boxes-label"> Boxes</label>
-    <app-data ></app-data>
+    <app-data [parentData]="parentData"></app-data>
    </div>
 </div>
 
