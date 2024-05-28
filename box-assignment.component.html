@@ -1,0 +1,80 @@
+<div class="box-container">
+  <div class="box-assignment" id="1">
+    <label class="boxes-label">Search for boxes
+        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-button class="toggle-btn"><b> >> </b> </button>
+    </label>
+    <div class="input-group">
+    <button style="width: 240px ;height: 30px; margin-left: 3px;" (click)="filterData()" ><b>Search all unassigned boxes</b></button>
+    </div>
+    <hr>
+    <label style="text-align: center; display: block;">-OR-</label>
+    <hr>
+    <label style="font-size: small;">Box Received</label>
+    <br>
+    <div class="date">
+        <div>
+            <label>From:</label>
+            <input type="date" ng-model="box.fromDate">
+          </div>
+          <div>
+            <label>To:</label>
+            <input type="date" ng-model="box.toDate">
+          </div>
+    
+    </div>
+    <div class="input-group">
+        <label>Site:</label>
+        <br>
+        <div class="custom-select">
+        <select ng-model="box.site">
+            <option value="AU Imaging - AU IMAGING">AU Imaging - AU IMAGING</option>
+            <!-- Add more options if needed -->
+        </select>
+    </div>
+    </div>
+    <div class="input-group">
+        <div class="custom-select1">
+        <label>Customer:</label>
+        <br>
+        <select ng-model="box.customer">
+            <option value="All">All</option>
+            <!-- Add more options if needed -->
+        </select>
+    </div>
+    </div>
+    <div class="input-group">
+        <div class="custom-select1">
+        <label>Status:</label>
+        <br>
+        <select ng-model="box.status">
+            <option value="Unassigned">Unassigned</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+            <option value="All">All</option>
+        </select>
+    </div>
+    </div>
+    <div class="input-group">
+        <label>SKP Order Number:</label>
+        <br>
+        <input type="text" ng-model="box.skpOrderNumber">
+    </div>
+    <div class="input-group">
+        <label>Box Number:</label>
+        <br>
+        <textarea rows="1" ng-model="box.boxNumber"></textarea>
+    </div>
+    <div class="input-group">
+      <button mat-button class="toggle-btn"><b> Filter </b> </button>
+     </div>
+   </div>
+   <div class="box">
+    <label class= "boxes-label"> Boxes</label>
+    <app-data ></app-data>
+   </div>
+</div>
+

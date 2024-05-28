@@ -1,0 +1,58 @@
+<!-- e2e-reporting.component.html -->
+<div class="toolbar">
+    <button class="select" (click)="selectAll()">Select All</button>
+    <button mat-icon-button (click)="goToFirstPage()">
+      <mat-icon>first_page</mat-icon>
+    </button>
+    <button mat-icon-button (click)="goToPreviousPage()">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <span>Page</span>
+    <input matInput type="number" [(ngModel)]="pageNumber" (keyup.enter)="goToPage(pageNumber)" min="1" [max]="totalPages">
+    <span>of {{ totalPages }}</span>
+    <button mat-icon-button (click)="goToNextPage()">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+    <button mat-icon-button (click)="goToLastPage()">
+      <mat-icon>last_page</mat-icon>
+    </button>
+    <button mat-icon-button (click)="refresh()">
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </div>
+  
+
+  <table>
+    <thead>
+      <tr>
+        <th>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;</th>
+        <th>District</th>
+        <th>Customer</th>
+        <th>Status</th>
+        <th>SKP Order #</th>
+        <th>Box #</th>
+        <th>Box Received Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users" >
+        <td><mat-checkbox class="checkbox"></mat-checkbox></td>
+        <td>{{ user.district }}</td>
+        <td>{{ user.customer }}</td>
+        <td>{{ user.status }}</td>
+        <td>{{ user.SKPorder }}</td>
+        <td>{{ user.boxno }}</td>
+        <td>{{ user.boxrecieveddate }}</td>
+      </tr>
+    </tbody>
+  </table>
+<!--
+<ul>
+    @for(user of users; track user){
+        <li>{{ user.district }}</li>
+        <li>{{ user.customer }}</li>
+        <li>{{ user.status }}</li>
+    }
+</ul>
+-->

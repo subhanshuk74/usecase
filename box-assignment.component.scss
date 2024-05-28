@@ -1,0 +1,157 @@
+.box-container {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    width: 100%;
+}
+.box-assignment {
+    display:flexbox;
+    justify-content: center;
+    width: 20%; /* Adjust the width as needed */
+    margin: 0; /* Remove default margin */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    border-right: 3px solid rgb(198, 193, 193); /* Add right border */
+     /* Add padding for better alignment */
+    border-left: 3px solid rgb(198, 193, 193);
+    
+}
+
+.input-group {
+    margin-bottom: 5px; /* Add spacing between input groups */
+    margin-top: 5px;
+    width: 90%;
+}
+
+label {
+    font-weight: bold; /* Make label text bold */
+    font-size: small;
+}
+
+  
+
+select {
+    width: 240px; /* Set the width of the dropdown box */
+    height: 25px; /* Set the height of the dropdown box */
+}
+.boxes-label {
+background-color: rgba(183, 183, 183, 0.737);
+display: block;
+padding: 5px; /* Add padding as needed */
+color: rgb(21, 21, 160);
+border: 1px solid #000000;
+font-size: medium;
+
+}
+.date {
+    display: flex;
+  }
+  
+  .date div {
+    margin-right: 10px; /* Adjust spacing between date inputs */
+  }
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+}
+
+.custom-select select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+    background-position: right 8px center;
+}
+
+.custom-select select::-ms-expand {
+    display: none;
+}
+
+.custom-select select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.custom-select::after {
+    content: '\02C5';
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background-color: #ccc; /* Add background color to the arrow */
+    padding: 3px; /* Add padding to make the arrow more visible */
+    border-radius: 10%; /* Make the arrow circular */
+}
+
+
+.custom-select1 {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+}
+
+.custom-select1 select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+    background-position: right 8px center;
+}
+
+.custom-select1 select::-ms-expand {
+    display: none;
+}
+
+.custom-select1 select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.custom-select1::after {
+    content: '\02C5';
+    position: absolute;
+    top: 70%;
+    right: 1px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background-color: #ccc; /* Add background color to the arrow */
+    padding: 3px; /* Add padding to make the arrow more visible */
+    border-radius: 10%; /* Make the arrow circular */
+}
+.button{
+    border-radius: 0px;
+}
+.box{
+  
+    flex-grow: 1;
+    border-right: 3px solid rgb(198, 193, 193); /* Add right border */
+    border-left: 3px solid rgb(198, 193, 193); /* Add right border */
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.box-assignment.collapsed {
+    height: 50px; /* Adjust the collapsed height as needed */
+    overflow: hidden; /* Hide overflow content when collapsed */
+}
